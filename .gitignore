@@ -1,0 +1,10 @@
+__pycache__/*
+venv/*
+.idea/*
+*.log
+*__pycache__*
+*.yaml
+processors/*
+processors
+mappings/*
+mappings
