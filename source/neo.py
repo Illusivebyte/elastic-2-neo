@@ -376,14 +376,14 @@ class GraphBuilder:
                                                    relationship['instances']):
                 statement = "MATCH "
                 if 'uniqueLabels' in relationship['sourceNode']:
-                    statement += "(s{}), ".format(self._gen_label_string(node_instance["uniqueLabels"]))
+                    statement += "(s{}), ".format(self._gen_label_string(relationship["sourceNode"]["uniqueLabels"]))
                 else:
-                    statement += "(s{}), ".format(self._gen_label_string(node_instance["labels"]))
-                if 'uniqueLabels' in relationship['destinationNode']:
+                    statement += "(s{}), ".format(self._gen_label_string(relationship["sourceNode"]["labels"]))
+                if 'uniqueLabels' in node_instance:
                     statement += "(d{}) ".format(
-                        self._gen_label_string(relationship["destinationNode"]["uniqueLabels"]))
+                        self._gen_label_string(node_instance["uniqueLabels"]))
                 else:
-                    statement += "(d{}) ".format(self._gen_label_string(relationship["destinationNode"]["labels"]))
+                    statement += "(d{}) ".format(self._gen_label_string(node_instance["labels"]))
                 first_has_props = False
                 if 'uniqueProperties' in relationship["sourceNode"]:
                     statement += "{}".format(self._gen_properties_string(relationship["sourceNode"]["uniqueProperties"],
