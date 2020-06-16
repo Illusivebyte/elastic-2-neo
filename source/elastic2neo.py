@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import logging
-from neo import GraphBuilder
-from elastic import ElasticScroller
+from source.neo import GraphBuilder
+from source.elastic import ElasticScroller
 from yaml import full_load, YAMLError
 import getopt
 import sys
