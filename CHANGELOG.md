@@ -1,5 +1,9 @@
 # Change Log
 
+### 06/16/2020 0.0.3a
+- Updated project structure
+- Fixed error in code relating to destination iterative nodes
+
 ### 04/04/2020 0.0.2a 
 - Added -e "end after empty" command that will cause the program to end execution
 after the elastic index is exhausted
